@@ -1,0 +1,202 @@
+[
+    {
+    "id": 1,
+    "name": "Pullover aus Baumwolle",
+    "price": 20.99,
+    "variants": [
+        {
+            "id": 1,
+            "color": "HIMMELBLAU",
+            "images": [
+                "https://media.soliver.com/i/soliver/2134575.53W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+            ],
+            "sizes" :  [
+                {
+                    "name": "S",
+                    "stock": 3
+                },
+                {
+                    "name": "M",
+                    "stock": 14
+                },
+                {
+                    "name": "L",
+                    "stock": 3
+                },
+                {
+                    "name": "XL",
+                    "stock": 1
+                },
+                {
+                    "name": "XXL",
+                    "stock": 0
+                }
+            ],
+            "hexCode": "#28334e"
+            
+        },
+        {
+            "id": 2,
+            "color": "SANDFARBEN",
+            "images": [
+                "https://media.soliver.com/i/soliver/2134575.82W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+            ],
+            "sizes" : [
+                {
+                    "name": "S",
+                    "stock": 3
+                },
+                {
+                    "name": "M",
+                    "stock": 14
+                },
+                {
+                    "name": "L",
+                    "stock": 3
+                },
+                {
+                    "name": "XL",
+                    "stock": 1
+                },
+                {
+                    "name": "XXL",
+                    "stock": 0
+                }
+            ],
+            "hexCode": "#b1a194"			
+        }
+    ],
+    "details": 
+        [
+        {
+            "title" : "Model",
+            "text": "Strukturmuster"
+        },
+        {
+            "title" : "Detail",
+            "text": "Crew Neck"
+        },
+        {
+            "title" : "Sleve",
+            "text": "lange Ärmel"
+        },
+        {
+            "title" : "Seam",
+            "text": "mit Rippblende"
+        },
+        {
+            "title" : "Occasion",
+            "text": "Casual"
+        }],
+    "productNumbers": {
+        "ean" : "4099586108886",
+        "productNumber" : "2134575.53W0.S"
+    }
+},
+{
+    "id": 2,
+    "name": "Pullover aus Baumwolle 2",
+    "price": 20.99,
+    "variants": [
+        {
+            "id": 1,
+            "color": "HIMMELBLAU",
+            "images": [
+                "https://media.soliver.com/i/soliver/2135725.59W2_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2135725.59W2_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.53W0_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+            ],
+            "sizes" :  [
+                {
+                    "name": "S",
+                    "stock": 3
+                },
+                {
+                    "name": "M",
+                    "stock": 14
+                },
+                {
+                    "name": "L",
+                    "stock": 3
+                },
+                {
+                    "name": "XL",
+                    "stock": 1
+                },
+                {
+                    "name": "XXL",
+                    "stock": 0
+                }
+            ],
+            "hexCode": "#28334e"
+            
+        },
+        {
+            "id": 2,
+            "color": "SANDFARBEN",
+            "images": [
+                "https://media.soliver.com/i/soliver/2134575.82W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+            ],
+            "sizes" : [
+                {
+                    "name": "S",
+                    "stock": 3
+                },
+                {
+                    "name": "M",
+                    "stock": 14
+                },
+                {
+                    "name": "L",
+                    "stock": 3
+                },
+                {
+                    "name": "XL",
+                    "stock": 1
+                },
+                {
+                    "name": "XXL",
+                    "stock": 0
+                }
+            ],
+            "hexCode": "#b1a194"			
+        }
+    ],
+    "details": 
+    [
+    {
+        "title" : "Model",
+        "text": "Strukturmuster"
+    },
+    {
+        "title" : "Detail",
+        "text": "Crew Neck"
+    },
+    {
+        "title" : "Sleve",
+        "text": "lange Ärmel"
+    },
+    {
+        "title" : "Seam",
+        "text": "mit Rippblende"
+    },
+    {
+        "title" : "Occasion",
+        "text": "Casual"
+    }],
+    "productNumbers": {
+        "ean" : "4099586108886",
+        "productNumber" : "2134575.53W0.S"
+    }
+}
+]
