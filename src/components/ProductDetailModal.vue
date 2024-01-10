@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref , defineEmits, onMounted } from 'vue'
 import ModalView from '../components/shared/ModalView.vue'
+import ProductImages from './ProductImages.vue'
 import ProductInfo from './ProductInfo.vue'
 import ProductInfoTabs from './ProductInfoTabs.vue'
 import ProductColorVariants from './ProductColorVariants.vue'
 const showModal = ref(false)
-import {Swiper, SwiperSlide} from 'swiper/vue'
-import { Pagination } from 'swiper/modules';
-import 'swiper/css'
-import 'swiper/css/pagination'
 import { defineProps } from 'vue'
 const props = defineProps({
   product: {
@@ -16,6 +13,8 @@ const props = defineProps({
     required: true
   }
 })
+const emits = defineEmits(['color-click']);
+
 const productName = ref(props.product.name)
 const productPrice = ref(props.product.price)
 const productColorVariants = ref(props.product.variants)
@@ -24,30 +23,18 @@ const productNumbers = ref(props.product.productNumbers)
 
 console.log(productColorVariants)
 
-const photosArray = ref([
-    {
-      id: 1,
-      src: 'https://media.soliver.com/i/soliver/2134575.53W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596',
-    },
-    {
-      id: 2,
-      src: 'https://media.soliver.com/i/soliver/2134575.53W0_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596'
-    },
-    {
-      id: 3,
-      src: 'https://media.soliver.com/i/soliver/2134575.53W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596'
-    },
-    {
-      id: 4,
-      src: 'https://media.soliver.com/i/soliver/2134575.53W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596'
-    },
-    {
-      id: 5,
-      src: 'https://media.soliver.com/i/soliver/2134575.53W0_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596'
-    }
-])
-const modules = [Pagination]
+const selectedColorImages = ref();
+const handleColorClick = (item) => {
+  console.log('Color clicked in parent:', item);
+  selectedColorImages.value = item.images;
+  emits('color-click', item);
+};
 
+onMounted(() => {
+  if (productColorVariants.value.length > 0) {
+    selectedColorImages.value = productColorVariants.value[0].images;
+  }
+});
 </script>
 
 <template>
@@ -74,35 +61,10 @@ const modules = [Pagination]
     </template>
     <template v-slot:content>
       <div class="grid grid-cols-12">
-        <div class="col-span-8 md:col-span-12">
-        <swiper
-          :modules="modules"
-          :loop="true"
-          :pagination="{clickable: true}"
-          :breakpoints="{
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 2,
-          },
-          2560: {
-            slidesPerView: 4,
-          }
-          }"
-          >
-          <swiper-slide v-for="photo in photosArray" :key="photo.id">
-            <img :src="photo.src" loading="lazy" />
-            <div class="swiper-lazy-preloader"></div>
-          </swiper-slide>
-          </swiper>
-        </div>
+        <ProductImages :selectedColorImages="selectedColorImages" />
         <div class="min-h-96 col-span-4 md:col-span-12 p-5 flex flex-col">
           <ProductInfo :productName="productName" :productPrice="productPrice" />
-          <ProductColorVariants :productColorVariants="productColorVariants" />
+          <ProductColorVariants @color-click="handleColorClick" :productColorVariants="productColorVariants" />
         </div>
       </div>
       <div class="grid">

@@ -52,8 +52,7 @@ const isFetched = computed(() => {
       <img :src="product.variants[0].images[0]" />
       <p class="text-gray-800 text-2xl my-1">{{ product.name }}</p>
       <div class="flex">
-        <span class="font-bold mr-1">Available Colors :</span>
-        <span v-bind:style="{ backgroundColor: variant.hexCode }" class="mr-1 rounded-2xl w-6 h-6 bg-black inline-flex" v-for="variant in product.variants" :key="variant.id"></span>
+        <span class="font-bold mr-1">{{ product.price }}</span>
       </div>
       <ProductDetailModal :product="product" />
     </div>

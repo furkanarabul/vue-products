@@ -101,18 +101,18 @@
 },
 {
     "id": 2,
-    "name": "Pullover aus Baumwolle 2",
-    "price": 20.99,
+    "name": "Mantel mit herausnehmbarem Innenfutter",
+    "price": 59.99,
     "variants": [
         {
             "id": 1,
-            "color": "HIMMELBLAU",
+            "color": "OLIVGRÜN",
             "images": [
-                "https://media.soliver.com/i/soliver/2135725.59W2_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2135725.59W2_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.53W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.53W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.53W0_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+                "https://media.soliver.com/i/soliver/2130043.7969_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.7969_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.7969_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.7969_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.7969_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
             ],
             "sizes" :  [
                 {
@@ -136,16 +136,18 @@
                     "stock": 0
                 }
             ],
-            "hexCode": "#28334e"
+            "hexCode": "#665f48"
             
         },
         {
             "id": 2,
-            "color": "SANDFARBEN",
+            "color": "ZIMT",
             "images": [
-                "https://media.soliver.com/i/soliver/2134575.82W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.82W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.82W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+                "https://media.soliver.com/i/soliver/2130043.8739_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.8739_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.8739_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.8739_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2130043.8739_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
             ],
             "sizes" : [
                 {
@@ -169,7 +171,7 @@
                     "stock": 0
                 }
             ],
-            "hexCode": "#b1a194"			
+            "hexCode": "#97632f"			
         }
     ],
     "details": 
