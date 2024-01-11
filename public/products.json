@@ -17,23 +17,23 @@
             "sizes" :  [
                 {
                     "name": "S",
-                    "stock": 3
+                    "inStock": true
                 },
                 {
                     "name": "M",
-                    "stock": 14
+                    "inStock": false
                 },
                 {
                     "name": "L",
-                    "stock": 3
+                    "inStock": false
                 },
                 {
                     "name": "XL",
-                    "stock": 1
+                    "inStock": true
                 },
                 {
                     "name": "XXL",
-                    "stock": 0
+                    "inStock": true
                 }
             ],
             "hexCode": "#28334e"
@@ -45,28 +45,31 @@
             "images": [
                 "https://media.soliver.com/i/soliver/2134575.82W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
                 "https://media.soliver.com/i/soliver/2134575.82W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
-                "https://media.soliver.com/i/soliver/2134575.82W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+                "https://media.soliver.com/i/soliver/2134575.82W0_flat?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_d1?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
+                "https://media.soliver.com/i/soliver/2134575.82W0_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596"
+
             ],
             "sizes" : [
                 {
                     "name": "S",
-                    "stock": 3
+                    "inStock": false
                 },
                 {
                     "name": "M",
-                    "stock": 14
+                    "inStock": true
                 },
                 {
                     "name": "L",
-                    "stock": 3
+                    "inStock": false
                 },
                 {
                     "name": "XL",
-                    "stock": 1
+                    "inStock": true
                 },
                 {
                     "name": "XXL",
-                    "stock": 0
+                    "inStock": true
                 }
             ],
             "hexCode": "#b1a194"			
@@ -117,23 +120,23 @@
             "sizes" :  [
                 {
                     "name": "S",
-                    "stock": 3
+                    "inStock": true
                 },
                 {
                     "name": "M",
-                    "stock": 14
+                    "inStock": false
                 },
                 {
                     "name": "L",
-                    "stock": 3
+                    "inStock": false
                 },
                 {
                     "name": "XL",
-                    "stock": 1
+                    "inStock": true
                 },
                 {
                     "name": "XXL",
-                    "stock": 0
+                    "inStock": true
                 }
             ],
             "hexCode": "#665f48"
@@ -152,23 +155,23 @@
             "sizes" : [
                 {
                     "name": "S",
-                    "stock": 3
+                    "inStock": true
                 },
                 {
                     "name": "M",
-                    "stock": 14
+                    "inStock": true
                 },
                 {
                     "name": "L",
-                    "stock": 3
+                    "inStock": false
                 },
                 {
                     "name": "XL",
-                    "stock": 1
+                    "inStock": false
                 },
                 {
                     "name": "XXL",
-                    "stock": 0
+                    "inStock": true
                 }
             ],
             "hexCode": "#97632f"			

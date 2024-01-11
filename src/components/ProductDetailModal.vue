@@ -21,8 +21,6 @@ const productColorVariants = ref(props.product.variants)
 const productDetails = ref(props.product.details)
 const productNumbers = ref(props.product.productNumbers)
 
-console.log(productColorVariants)
-
 const selectedColorImages = ref();
 const handleColorClick = (item) => {
   console.log('Color clicked in parent:', item);
