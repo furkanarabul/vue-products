@@ -44,7 +44,7 @@ const isFetched = computed(() => {
 </script>
 
 <template>
-  <div class="h-screen flex items-center justify-center container mx-auto">
+  <div class="h-screen flex items-center justify-center container mx-auto sm:flex-wrap">
     <div v-if="!isFetched">
       Loading...
     </div>
