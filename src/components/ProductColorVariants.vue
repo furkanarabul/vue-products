@@ -5,27 +5,31 @@
       <span class="text-sm mt-10">{{ selectedColorName }}</span>
       <div>
         <span
-        v-for="item in productColorVariants"
-        :key="item.id"
-        :class="{
-          'outline outline-offset-1 outline-black':
-            selectedColor && selectedColor.color === item.color,
-        }"
-        class="ml-1 mt-2 text-sm font-bold mr-1 rounded-2xl w-6 h-6 bg-black inline-flex cursor-pointer"
-        v-bind:style="{ backgroundColor: item.hexCode }"
-        @click="onColorClick(item)"
-      >
-      </span>
+          v-for="item in productColorVariants"
+          :key="item.id"
+          :class="{
+            'outline outline-offset-1 outline-black':
+              selectedColor && selectedColor.color === item.color,
+          }"
+          class="ml-1 mt-2 text-sm font-bold mr-1 rounded-2xl w-6 h-6 bg-black inline-flex cursor-pointer"
+          v-bind:style="{ backgroundColor: item.hexCode }"
+          @click="onColorClick(item)"
+        >
+        </span>
       </div>
     </div>
     <div v-if="selectedColor && selectedColor.sizes">
-      <h3 class="text-lg font-bold mt-4">Available Sizes:</h3>
-      <ul class="flex">
+      <div v-if="selectedSize">
+        <p class="text-sm mt-2"> Size: <span class="font-bold"> {{ selectedSize.name }}</span></p>
+      </div>
+      <ul class="flex mt-3">
         <li class="flex mr-2" v-for="size in selectedColor.sizes" :key="size.name">
           <span
+            @click="onSizeClick(size)"
             class="h-7 w-14 rounded-3xl bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs font-medium cursor-pointer"
-            v-bind:class="{ 'bg-slate-50 text-slate-200 cursor-not-allowed hover:bg-slate-50': size.inStock }">
-              {{ size.name }}
+            v-bind:class="{ 'bg-slate-50 text-slate-200 cursor-not-allowed hover:bg-slate-50': !size.inStock }"
+          >
+            {{ size.name }}
           </span>
         </li>
       </ul>
@@ -50,16 +54,26 @@ const props = defineProps({
   },
 });
 
-const selectedColor = ref<ColorVariant | null>(null); // Specify the type for selectedColor
+const selectedColor = ref<ColorVariant | null>(null);
 const selectedColorName = ref("");
+const selectedSize = ref<{ name: string; inStock: boolean } | null>(null);
 
 const emits = defineEmits(["color-click"]);
 
 const onColorClick = (item: ColorVariant) => {
-  selectedColor.value = item; // Assign the entire item, including sizes
+  selectedColor.value = item;
   selectedColorName.value = item.color;
+  selectedSize.value = null; // Reset selected size when color changes
   console.log("Clicked color:", item);
   emits("color-click", item);
+};
+
+const onSizeClick = (size: { name: string; inStock: boolean }) => {
+  if (size.inStock) {
+    selectedSize.value = size;
+    console.log("Clicked size:", size);
+    // Add additional logic as needed
+  }
 };
 
 onMounted(() => {
