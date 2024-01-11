@@ -45,8 +45,8 @@ onMounted(() => {
   </button>
   <ModalView :show="showModal">
     <template v-slot:header>
-      <div class="sticky justify-end flex bg-white w-full top-0 my-2.5 z-10">
-        <button type="button" class="self-end" @click="showModal = false">
+      <div class="sticky justify-end flex w-full top-0 my-2.5 z-10 h-8">
+        <button type="button" class="self-end mr-4" @click="showModal = false">
           <svg
             class="h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ onMounted(() => {
       </div>
     </template>
     <template v-slot:content>
-      <div class="grid grid-cols-12">
+      <div class="grid grid-cols-12 px-4">
         <ProductImages :selectedColorImages="selectedColorImages" />
         <div class="min-h-96 col-span-4 md:col-span-12 p-5 sm:px-0 flex flex-col">
           <ProductInfo :productName="productName" :productPrice="productPrice" />
@@ -84,10 +84,10 @@ onMounted(() => {
       </div>
     </template>
     <template v-slot:footer>
-      <span>{{ productName }}</span>
+      <span class="ml-4">{{ productName }}</span>
       <button
         type="button"
-        class="flex items-center justfiy-between my-1 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 font-bold text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+        class="mr-4 flex items-center justfiy-between my-1 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 font-bold text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 mt-4"
       >
         Add to Cart
         <span class="sm:ml-0 ml-12">

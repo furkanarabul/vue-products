@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 defineProps<{
-  show: boolean
-}>()
-
+  show: boolean;
+}>();
 </script>
 
 <template>
@@ -16,11 +15,12 @@ defineProps<{
 
       <!-- Where the actual content goes -->
       <div class="fixed inset-0 flex items-center justify-center">
-        <div class="bg-white text-black shadow-lg w-4/5 h-4/5 overflow-scroll px-4">
+        <div class="bg-white text-black shadow-lg w-4/5 h-4/5 overflow-scroll">
           <slot name="header"></slot>
           <slot name="content"></slot>
-          <footer class="flex items-center justify-between sticky bg-white h-18 bottom-0 mt-3 z-10">
-
+          <footer
+            class="flex items-center justify-between sticky h-18 bottom-0 mt-3 z-10"
+          >
             <slot name="footer"></slot>
           </footer>
         </div>
@@ -28,4 +28,10 @@ defineProps<{
     </div>
   </Teleport>
 </template>
-
+<style>
+footer {
+  box-shadow: 8px 7px 0px -20px rgba(0, 0, 0, 0.45),
+    2px -12px 36px -23px rgba(0, 0, 0, 0.45);
+  background: white;
+}
+</style>
