@@ -15,7 +15,7 @@ defineProps<{
 
       <!-- Where the actual content goes -->
       <div class="fixed inset-0 flex items-center justify-center">
-        <div class="bg-white text-black shadow-lg w-4/5 h-4/5 overflow-scroll">
+        <div class="bg-white text-black shadow-lg w-4/5 h-4/5 overflow-scroll grid">
           <slot name="header"></slot>
           <slot name="content"></slot>
           <footer
