@@ -8,7 +8,7 @@
           v-for="item in productColorVariants"
           :key="item.id"
           :class="{
-            'outline outline-offset-1 outline-black':
+            'outline outline-offset-2 outline-1 outline-black':
               selectedColor && selectedColor.color === item.color,
           }"
           class="ml-1 mt-2 text-sm font-bold mr-1 rounded-2xl w-6 h-6 bg-black inline-flex cursor-pointer"
@@ -19,15 +19,26 @@
       </div>
     </div>
     <div v-if="selectedColor && selectedColor.sizes">
-      <div v-if="selectedSize">
-        <p class="text-sm mt-2"> Size: <span class="font-bold"> {{ selectedSize.name }}</span></p>
+      <div>
+        <p class="text-sm mt-2">
+            <span v-if="selectedSize">
+              <b>Size: </b>{{ selectedSize.name }}
+            </span>
+            <span v-else>Select your size</span>
+        </p>
+      </div>
+      <div >
+
       </div>
       <ul class="flex mt-3">
         <li class="flex mr-2" v-for="size in selectedColor.sizes" :key="size.name">
           <span
             @click="onSizeClick(size)"
             class="h-7 w-14 rounded-3xl bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-xs font-medium cursor-pointer"
-            v-bind:class="{ 'bg-slate-50 text-slate-200 cursor-not-allowed hover:bg-slate-50': !size.inStock }"
+            v-bind:class="{
+              'bg-slate-50 text-slate-200 cursor-not-allowed hover:bg-slate-50': !size.inStock,
+              'outline outline-offset-2 outline-1 outline-black': selectedSize === size,
+            }"
           >
             {{ size.name }}
           </span>
@@ -63,7 +74,7 @@ const emits = defineEmits(["color-click"]);
 const onColorClick = (item: ColorVariant) => {
   selectedColor.value = item;
   selectedColorName.value = item.color;
-  selectedSize.value = null; // Reset selected size when color changes
+  selectedSize.value = null;
   console.log("Clicked color:", item);
   emits("color-click", item);
 };
