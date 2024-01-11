@@ -21,15 +21,11 @@
     <div v-if="selectedColor && selectedColor.sizes">
       <div>
         <p class="text-sm mt-2">
-            <span v-if="selectedSize">
-              <b>Size: </b>{{ selectedSize.name }}
-            </span>
-            <span v-else>Select your size</span>
+          <span class="" v-if="selectedSize"> Size: <b>{{ selectedSize.name }}</b></span>
+          <span v-else>Select your size</span>
         </p>
       </div>
-      <div >
-
-      </div>
+      <div></div>
       <ul class="flex mt-3">
         <li class="flex mr-2" v-for="size in selectedColor.sizes" :key="size.name">
           <span
