@@ -1,9 +1,3 @@
-<template>
-  <div class="p-8" v-show="isActive">
-    <slot />
-  </div>
-</template>
-
 <script setup lang="ts">
 import { defineProps, inject, ref, onBeforeMount, watch, Ref } from "vue";
 
@@ -39,3 +33,10 @@ watch(tabsContainerContext?.activeTabHash, () => {
   isActive.value = tabsContainerContext?.activeTabHash.value === hash.value;
 });
 </script>
+
+<template>
+  <div class="p-8" v-show="isActive">
+    <slot />
+  </div>
+</template>
+

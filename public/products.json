@@ -1,12 +1,12 @@
 [
     {
     "id": 1,
-    "name": "Pullover aus Baumwolle",
+    "name": "Cotton jumper",
     "price": 20.99,
     "variants": [
         {
             "id": 1,
-            "color": "HIMMELBLAU",
+            "color": "SKY BLUE",
             "images": [
                 "https://media.soliver.com/i/soliver/2134575.53W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
                 "https://media.soliver.com/i/soliver/2134575.53W0_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
@@ -41,7 +41,7 @@
         },
         {
             "id": 2,
-            "color": "SANDFARBEN",
+            "color": "SAND",
             "images": [
                 "https://media.soliver.com/i/soliver/2134575.82W0_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
                 "https://media.soliver.com/i/soliver/2134575.82W0_back?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
@@ -78,38 +78,34 @@
     "details": 
         [
         {
-            "title" : "Model",
-            "text": "Strukturmuster"
+            "title" : "Pattern",
+            "text": "textured pattern"
         },
         {
-            "title" : "Detail",
-            "text": "Crew Neck"
+            "title" : "Neckline",
+            "text": "crew neck"
         },
         {
-            "title" : "Sleve",
-            "text": "lange Ärmel"
+            "title" : "Sleeves",
+            "text": "long sleeves"
         },
         {
-            "title" : "Seam",
-            "text": "mit Rippblende"
+            "title" : "Hem",
+            "text": "With a ribbed trim"
         },
         {
             "title" : "Occasion",
             "text": "Casual"
-        }],
-    "productNumbers": {
-        "ean" : "4099586108886",
-        "productNumber" : "2134575.53W0.S"
-    }
+        }]
 },
 {
     "id": 2,
-    "name": "Mantel mit herausnehmbarem Innenfutter",
+    "name": "Coat with removable lining",
     "price": 59.99,
     "variants": [
         {
             "id": 1,
-            "color": "OLIVGRÜN",
+            "color": "OLIVE",
             "images": [
                 "https://media.soliver.com/i/soliver/2130043.7969_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
                 "https://media.soliver.com/i/soliver/2130043.7969_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
@@ -144,7 +140,7 @@
         },
         {
             "id": 2,
-            "color": "ZIMT",
+            "color": "CINNAMON",
             "images": [
                 "https://media.soliver.com/i/soliver/2130043.8739_front?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
                 "https://media.soliver.com/i/soliver/2130043.8739_outfit?bg=rgb(239,239,239)&qlt=default&fmt=auto&w=596",
@@ -180,28 +176,24 @@
     "details": 
     [
     {
-        "title" : "Model",
-        "text": "Strukturmuster"
+        "title" : "Hood",
+        "text": "fixed"
     },
     {
-        "title" : "Detail",
-        "text": "Crew Neck"
+        "title" : "Fastener",
+        "text": "press stud placket"
     },
     {
-        "title" : "Sleve",
-        "text": "lange Ärmel"
+        "title" : "Sleeves",
+        "text": "cuffs"
     },
     {
-        "title" : "Seam",
-        "text": "mit Rippblende"
+        "title" : "Pockets",
+        "text": "flap pocket"
     },
     {
-        "title" : "Occasion",
-        "text": "Casual"
-    }],
-    "productNumbers": {
-        "ean" : "4099586108886",
-        "productNumber" : "2134575.53W0.S"
-    }
+        "title" : "Details",
+        "text": "drawstring ties"
+    }]
 }
 ]

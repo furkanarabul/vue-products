@@ -52,7 +52,7 @@ const isFetched = computed(() => {
       <img :src="product.variants[0].images[0]" />
       <p class="text-gray-800 text-2xl my-1">{{ product.name }}</p>
       <div class="flex">
-        <span class="font-bold mr-1">{{ product.price }}</span>
+        <span class="font-bold mr-1">{{ product.price }} €</span>
       </div>
       <ProductDetailModal :product="product" />
     </div>

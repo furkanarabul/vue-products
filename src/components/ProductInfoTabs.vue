@@ -1,29 +1,32 @@
+<script setup lang="ts">
+import TabsContainer from "./shared/TabsContainer.vue";
+import TabItem from "./shared/TabItem.vue";
+import { defineProps } from "vue";
+const props = defineProps({
+  productDetails: {
+    type: Object,
+    required: true,
+  }
+});
+
+/*
+interface Abc {
+  yahya: string;
+  arabul?: string;
+}
+
+const props = defineProps<Abc>();
+*/
+
+</script>
+
 <template>
   <TabsContainer>
     <TabItem title="DETAILS">
       <div>
         <div v-for="productDetail in productDetails" :key="productDetail.title">
-            {{ productDetail.title }}
+            <b>{{ productDetail.title }} : </b>
             {{ productDetail.text }}
-
-        </div>
-      </div>
-      <div class="mt-10">
-        <svg
-          class="h-5 w-5 mb-2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          focusable="false"
-        >
-          <path
-            d="M22.5 0H1.5C0.75 0 0 0.75 0 1.5V22.5C0 23.25 0.75 24 1.5 24H22.5C23.25 24 24 23.25 24 22.5V1.5C24 0.75 23.25 0 22.5 0ZM2.66667 21.3333V2.66667H21.3333V21.3333H2.66667ZM6.66667 5.33333C7.40305 5.33333 8 5.93029 8 6.66667V17.3333C8 18.0697 7.40305 18.6667 6.66667 18.6667C5.93029 18.6667 5.33333 18.0697 5.33333 17.3333V6.66667C5.33333 5.93029 5.93029 5.33333 6.66667 5.33333ZM10 5.33333C10.3682 5.33333 10.6667 5.63181 10.6667 6V18C10.6667 18.3682 10.3682 18.6667 10 18.6667C9.63181 18.6667 9.33333 18.3682 9.33333 18V6C9.33333 5.63181 9.63181 5.33333 10 5.33333ZM14.6667 6.66667C14.6667 5.93029 14.0697 5.33333 13.3333 5.33333C12.597 5.33333 12 5.93029 12 6.66667V17.3333C12 18.0697 12.597 18.6667 13.3333 18.6667C14.0697 18.6667 14.6667 18.0697 14.6667 17.3333V6.66667ZM17.3333 5.33333C18.0697 5.33333 18.6667 5.93029 18.6667 6.66667V17.3333C18.6667 18.0697 18.0697 18.6667 17.3333 18.6667C16.597 18.6667 16 18.0697 16 17.3333V6.66667C16 5.93029 16.597 5.33333 17.3333 5.33333Z"
-            fill="currentColor"
-          ></path>
-        </svg>
-        <div v-for="(value, name, index) in productNumbers" :key="index">
-          <span class="font-semibold">{{ name }} : </span>
-          <span> {{ value }}</span>
         </div>
       </div>
     </TabItem>
@@ -57,13 +60,13 @@
     </TabItem>
     <TabItem title="MATERIAL & CARE INSTRUCTIONS">
       <h2 class="font-bold my-3">MATERIAL</h2>
-      <div><span class="font-semibold">Stoff : </span><span>Baumwolle</span></div>
-      <div><span class="font-semibold">Qualität : </span><span>elastisch</span></div>
-      <h2 class="font-bold my-3">MATERIALZUSAMMENSETZUNG</h2>
+      <div><span class="font-semibold">Fabric : </span><span>cotton</span></div>
+      <div><span class="font-semibold">Quality : </span><span>strech</span></div>
+      <h2 class="font-bold my-3">MATERIAL COMPOSITION</h2>
       <div>
-        <span> 100% Baumwolle </span>
+        <span> 100% cotton </span>
       </div>
-      <h2 class="font-bold my-3">PFLEGEHINWEIS</h2>
+      <h2 class="font-bold my-3">CARE INSTRUCTIONS</h2>
       <div class="flex mb-2">
         <span
           ><svg
@@ -81,7 +84,7 @@
               ></path>
             </g></svg
         ></span>
-        <span class="ml-1">Chlorbleiche nicht möglich</span>
+        <span class="ml-1">Do not chlore</span>
       </div>
       <div class="flex mb-2">
         <span
@@ -100,7 +103,7 @@
               ></path>
             </g></svg
         ></span>
-        <span class="ml-1">Nicht für den Trockner geeignet</span>
+        <span class="ml-1">NDo not tumble</span>
       </div>
       <div class="flex mb-2">
         <span
@@ -119,7 +122,7 @@
               ></path>
             </g></svg
         ></span>
-        <span class="ml-1">Schonwaschgang 30°</span>
+        <span class="ml-1">Gentle wash cycle 30°</span>
       </div>
       <div class="flex mb-2">
         <span
@@ -138,7 +141,7 @@
               ></path>
             </g></svg
         ></span>
-        <span class="ml-1">Nicht heiß bügeln</span>
+        <span class="ml-1">No hot ironing</span>
       </div>
       <div class="flex">
         <span
@@ -157,7 +160,7 @@
               ></path>
             </g></svg
         ></span>
-        <span class="ml-1">Keine chemische Reinigung möglich</span>
+        <span class="ml-1">No dry cleaning</span>
       </div>
     </TabItem>
     <TabItem title="SUSTAINABILITY">
@@ -221,46 +224,13 @@
               ></path>
             </g></svg
         ></span>
-        <h2 class="font-bold ml-2">NACHHALTIG ZERTIFIZIERTE FASER</h2>
+        <h2 class="font-bold ml-2">CERTIFIED SUSTAINABLE FIBRE</h2>
       </div>
       <p class="mt-3">
-        Im Bereich nachhaltig zertifizierter Fasern engagieren wir uns für Naturfasern aus
-        erneuerbaren Quellen. Ihre Rohstoffe sind ressourcenschonend angebaut. Dieses
-        Produkt unterstützt nachhaltigen Baumwollanbau: ökonomisch, ökologisch, sozial.
-        Die Beschaffung der nachhaltigen Baumwolle folgt dem Prinzip der Massenbilanz.
-        Mehr Informationen dazu findest du unter:
-        <a
-          href="https://soliver-group.com/en/responsibility/our-commitments/sustainable-fibres/"
-          target="_blank"
-          >hier</a
-        >
+        When it comes to certified sustainable fibres, we’re committed to using natural fibres from renewable sources. The raw materials are cultivated via resource-saving methods.
+        This product supports economically, ecologically and socially sustainable cotton farming. The sourcing of sustainable cotton follows the principle of mass balance. You can find more information here: <a href="https://soliver-group.com/en/responsibility/our-commitments/sustainable-fibres/" target="_blank">here</a>
       </p>
     </TabItem>
   </TabsContainer>
 </template>
 
-<script setup lang="ts">
-import TabsContainer from "./shared/TabsContainer.vue";
-import TabItem from "./shared/TabItem.vue";
-import { defineProps } from "vue";
-const props = defineProps({
-  productDetails: {
-    type: Object,
-    required: true,
-  },
-  productNumbers: {
-    type: Object,
-    required: true,
-  },
-});
-
-/*
-interface Abc {
-  yahya: string;
-  arabul?: string;
-}
-
-const props = defineProps<Abc>();
-*/
-
-</script>
