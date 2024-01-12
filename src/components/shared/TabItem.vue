@@ -39,4 +39,3 @@ watch(tabsContainerContext?.activeTabHash, () => {
     <slot />
   </div>
 </template>
-

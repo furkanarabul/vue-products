@@ -3,24 +3,22 @@ import { defineProps, watch } from "vue";
 const props = defineProps<{
   show: boolean;
 }>();
-watch (() => props.show, (newVal) => {
-  if(newVal) {
-    document.body.style.overflow = "hidden"
-  } else {
-    document.body.style.overflow = "auto"
+watch(
+  () => props.show,
+  (newVal) => {
+    if (newVal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }
-})
+);
 </script>
 
 <template>
-  <!-- Render inside our `<div id="modals"></div>` in index.html -->
   <Teleport to="#modals">
-    <!-- Show / hide the modal -->
     <div v-if="show">
-      <!-- The backdrop -->
       <div class="fixed inset-0 bg-gray-900 opacity-40"></div>
-
-      <!-- Where the actual content goes -->
       <div class="fixed inset-0 flex items-center justify-center">
         <div class="bg-white text-black shadow-lg w-4/5 h-4/5 overflow-scroll grid">
           <slot name="header"></slot>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import ProductDetailModal from './components/ProductDetailModal.vue';
-import { ref, onMounted, computed } from 'vue';
-import { Products } from './types'
+import ProductDetailModal from "./components/ProductDetailModal.vue";
+import { ref, onMounted, computed } from "vue";
+import { Products } from "./types";
 const products = ref<Products[]>([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch('products.json');
+    const response = await fetch("products.json");
     if (!response.ok) {
       throw new Error(`Failed to fetch product data`);
     }
@@ -23,10 +23,13 @@ const isFetched = computed(() => {
 
 <template>
   <div class="h-screen flex items-center justify-center container mx-auto sm:flex-wrap">
-    <div v-if="!isFetched">
-      Loading...
-    </div>
-    <div v-else v-for="product in products" :key="product.id" class="max-w-sm rounded overflow-hidden shadow-lg p-4 mx-4">
+    <div v-if="!isFetched">Loading...</div>
+    <div
+      v-else
+      v-for="product in products"
+      :key="product.id"
+      class="max-w-sm rounded overflow-hidden shadow-lg p-4 mx-4"
+    >
       <img :src="product.variants[0].images[0]" />
       <p class="text-gray-800 text-2xl my-1">{{ product.name }}</p>
       <div class="flex">

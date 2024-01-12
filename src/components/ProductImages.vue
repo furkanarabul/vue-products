@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 import { defineProps } from "vue";
 
 const modules = [Pagination, Navigation];
@@ -41,9 +41,9 @@ const props = defineProps({
 <style>
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev,
-.swiper-button-prev, 
-.swiper-container-rtl .swiper-button-next{
-    color: black;
-    opacity: 0.5;
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  color: black;
+  opacity: 0.5;
 }
 </style>

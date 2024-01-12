@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted, defineEmits } from "vue";
-import { ColorVariant } from '../types'
+import { ColorVariant } from "../types";
 
 const props = defineProps({
   productColorVariants: {
