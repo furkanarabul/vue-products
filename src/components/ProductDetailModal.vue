@@ -5,6 +5,8 @@ import ProductImages from "./ProductImages.vue";
 import ProductInfo from "./ProductInfo.vue";
 import ProductInfoTabs from "./ProductInfoTabs.vue";
 import ProductColorVariants from "./ProductColorVariants.vue";
+import { Variant } from "../types";
+
 const showModal = ref(false);
 import { defineProps } from "vue";
 const props = defineProps({
@@ -19,11 +21,10 @@ const productName = ref(props.product.name);
 const productPrice = ref(props.product.price);
 const productColorVariants = ref(props.product.variants);
 const productDetails = ref(props.product.details);
-const productNumbers = ref(props.product.productNumbers);
 
-const selectedColorImages = ref();
-const handleColorClick = (item) => {
-  console.log("Color clicked in parent:", item);
+const selectedColorImages = ref<string[]>([]);
+
+const handleColorClick = (item: Variant) => {
   selectedColorImages.value = item.images;
   emits("color-click", item);
 };
@@ -77,10 +78,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="grid">
-        <ProductInfoTabs
-          :productDetails="productDetails"
-          :productNumbers="productNumbers"
-        />
+        <ProductInfoTabs :productDetails="productDetails" />
       </div>
     </template>
     <template v-slot:footer>

@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted, defineEmits } from "vue";
-
-interface ColorVariant {
-  id: number;
-  color: string;
-  hexCode: string;
-  sizes?: { name: string; inStock: boolean }[];
-}
+import { ColorVariant } from '../types'
 
 const props = defineProps({
   productColorVariants: {
@@ -14,7 +8,6 @@ const props = defineProps({
     required: true,
   },
 });
-
 const selectedColor = ref<ColorVariant | null>(null);
 const selectedColorName = ref("");
 const selectedSize = ref<{ name: string; inStock: boolean } | null>(null);
@@ -25,15 +18,12 @@ const onColorClick = (item: ColorVariant) => {
   selectedColor.value = item;
   selectedColorName.value = item.color;
   selectedSize.value = null;
-  console.log("Clicked color:", item);
   emits("color-click", item);
 };
 
 const onSizeClick = (size: { name: string; inStock: boolean }) => {
   if (size.inStock) {
     selectedSize.value = size;
-    console.log("Clicked size:", size);
-    // Add additional logic as needed
   }
 };
 
@@ -42,7 +32,6 @@ onMounted(() => {
     const firstColor = props.productColorVariants[0];
     selectedColorName.value = firstColor.color;
     selectedColor.value = { ...firstColor, sizes: firstColor.sizes || [] };
-    console.log(selectedColor.value);
   }
 });
 </script>
@@ -67,7 +56,7 @@ onMounted(() => {
         </span>
       </div>
     </div>
-    <div v-if="selectedColor && selectedColor.sizes">
+    <div v-if="selectedColor?.sizes">
       <div>
         <p class="text-sm mt-2">
           <span class="" v-if="selectedSize">

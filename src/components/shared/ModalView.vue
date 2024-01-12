@@ -1,8 +1,15 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
-defineProps<{
+import { defineProps, watch } from "vue";
+const props = defineProps<{
   show: boolean;
 }>();
+watch (() => props.show, (newVal) => {
+  if(newVal) {
+    document.body.style.overflow = "hidden"
+  } else {
+    document.body.style.overflow = "auto"
+  }
+})
 </script>
 
 <template>

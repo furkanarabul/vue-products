@@ -4,18 +4,16 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
-
+import { defineProps } from "vue";
 
 const modules = [Pagination, Navigation];
 
-import { defineProps } from "vue";
 const props = defineProps({
   selectedColorImages: {
-    type: Array,
+    type: Array as () => string[],
     required: true,
   },
 });
-console.log(props.selectedColorImages);
 </script>
 
 <template>
@@ -32,8 +30,8 @@ console.log(props.selectedColorImages);
         2560: { slidesPerView: 4 },
       }"
     >
-      <swiper-slide v-for="photo in selectedColorImages" :key="photo.id">
-        <img :src="photo" loading="lazy" />
+      <swiper-slide v-for="imageUrl in selectedColorImages" :key="imageUrl">
+        <img :src="imageUrl" loading="lazy" />
         <div class="swiper-lazy-preloader"></div>
       </swiper-slide>
     </swiper>

@@ -2,22 +2,14 @@
 import TabsContainer from "./shared/TabsContainer.vue";
 import TabItem from "./shared/TabItem.vue";
 import { defineProps } from "vue";
+import { Detail } from "../types";
+
 const props = defineProps({
   productDetails: {
-    type: Object,
+    type: Array as () => Detail[],
     required: true,
-  }
+  },
 });
-
-/*
-interface Abc {
-  yahya: string;
-  arabul?: string;
-}
-
-const props = defineProps<Abc>();
-*/
-
 </script>
 
 <template>
@@ -25,8 +17,8 @@ const props = defineProps<Abc>();
     <TabItem title="DETAILS">
       <div>
         <div v-for="productDetail in productDetails" :key="productDetail.title">
-            <b>{{ productDetail.title }} : </b>
-            {{ productDetail.text }}
+          <b>{{ productDetail.title }} : </b>
+          {{ productDetail.text }}
         </div>
       </div>
     </TabItem>
@@ -227,10 +219,17 @@ const props = defineProps<Abc>();
         <h2 class="font-bold ml-2">CERTIFIED SUSTAINABLE FIBRE</h2>
       </div>
       <p class="mt-3">
-        When it comes to certified sustainable fibres, we’re committed to using natural fibres from renewable sources. The raw materials are cultivated via resource-saving methods.
-        This product supports economically, ecologically and socially sustainable cotton farming. The sourcing of sustainable cotton follows the principle of mass balance. You can find more information here: <a href="https://soliver-group.com/en/responsibility/our-commitments/sustainable-fibres/" target="_blank">here</a>
+        When it comes to certified sustainable fibres, we’re committed to using natural
+        fibres from renewable sources. The raw materials are cultivated via
+        resource-saving methods. This product supports economically, ecologically and
+        socially sustainable cotton farming. The sourcing of sustainable cotton follows
+        the principle of mass balance. You can find more information here:
+        <a
+          href="https://soliver-group.com/en/responsibility/our-commitments/sustainable-fibres/"
+          target="_blank"
+          >here</a
+        >
       </p>
     </TabItem>
   </TabsContainer>
 </template>
-

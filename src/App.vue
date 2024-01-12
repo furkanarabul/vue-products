@@ -1,30 +1,8 @@
 <script setup lang="ts">
 import ProductDetailModal from './components/ProductDetailModal.vue';
 import { ref, onMounted, computed } from 'vue';
-
-interface Variant {
-  id: number;
-  color: string;
-  hexCode: string;
-  images: string[];
-  sizes: {
-    name: string;
-    stock: number
-  }
-  details: {
-    text: string;
-    title: string;
-  }
-}
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  variants: Variant[];
-}
-
-const products = ref<Product[]>([]);
+import { Products } from './types'
+const products = ref<Products[]>([]);
 
 onMounted(async () => {
   try {
