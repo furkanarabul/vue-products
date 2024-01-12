@@ -1,4 +1,12 @@
-# soliver-case
+# Project Info
+
+• I built a single-page app with Vue.js/typescript/tailwind.
+• It allows to see product details and different colors and sizes
+
+• Live preview: [https://vue-products-nine.vercel.app/](https://vue-products-nine.vercel.app//)
+
+![](preview.gif)
+
 
 ## Project setup
 ```
@@ -8,21 +16,6 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration
