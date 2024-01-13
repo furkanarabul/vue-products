@@ -35,8 +35,7 @@ watch(
 </template>
 <style>
 footer {
-  box-shadow: 8px 7px 0px -20px rgba(0, 0, 0, 0.45),
-    2px -12px 36px -23px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 -2px 10px rgba(0, 0, 0, 0.15);
   background: white;
 }
 </style>
