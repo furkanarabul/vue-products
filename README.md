@@ -19,5 +19,15 @@ npm install
 npm run serve
 ```
 
+### Build the Docker image
+```
+docker build -t your-image-name .
+```
+
+### Run the Docker container
+```
+docker run -p 8080:8080 your-image-name
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
