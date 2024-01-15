@@ -19,14 +19,17 @@ npm install
 npm run serve
 ```
 
-### Build the Docker image
+# Run with Docker
+
+
+### Build the Container
 ```
-docker build -t your-image-name .
+docker compose build
 ```
 
 ### Run the Docker container
 ```
-docker run -p 8080:8080 your-image-name
+docker compose up
 ```
 
 ### Customize configuration
